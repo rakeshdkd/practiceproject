@@ -5,11 +5,16 @@ import { useState } from "react";
 const App = () => {
   const [userData, setUserData] = useState([]);
 
-  const formHandler = (uName, uAge) => {
+  const formHandler = (uName, uAge, cName) => {
     setUserData((prevUdata) => {
       return [
         ...prevUdata,
-        { name: uName, age: uAge, id: Math.random().toString() },
+        {
+          name: uName,
+          age: uAge,
+          collegeName: cName,
+          id: Math.random().toString(),
+        },
       ];
     });
   };
